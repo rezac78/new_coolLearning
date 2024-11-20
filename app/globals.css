@@ -12,7 +12,6 @@ body {
 .snap-item {
  scroll-snap-align: start;
 }
-
 @layer base {
  :root {
   --background: 0 0% 100%;
