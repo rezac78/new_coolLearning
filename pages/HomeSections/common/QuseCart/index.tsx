@@ -51,23 +51,19 @@ const fakeData = [
  },
 ];
 
-const renderStars = (rating: number) => {
- const totalStars = 5;
- const stars = [];
- for (let i = 1; i <= totalStars; i++) {
-  stars.push(
-   <span key={i} className={`text-xl ${i <= rating ? "text-yellow-500" : "text-gray-300"}`}>
-    ★
-   </span>
-  );
- }
- return stars;
-};
-
 export default function QuseCart() {
  return (
   <div className="container mx-auto py-10">
-   <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">محصولات برتر برنامه‌نویسی</h2>
+   <div className="flex justify-between mt-10 relative">
+    <div className="flex">
+     <h2 className="absolute -right-52 top-3 w-48 h-1.5 bg-blue-200 rounded-r-2xl"></h2>
+     <h2 className="absolute -right-6 top-3 w-5 h-1.5 bg-blue-400 rounded-l-2xl"></h2>
+     <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">آخرین آزمون ها</h2>
+    </div>
+    <Button variant="ghost" className="px-6 py-3 hover:text-blue-500">
+     مشاهده بیشتر
+    </Button>
+   </div>
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
     {fakeData.map((item) => (
      <Card key={item.id} className="bg-white text-gray-700 w-full shadow-lg rounded-md overflow-hidden">

@@ -6,7 +6,7 @@ import QuseCart from "./common/QuseCart";
 
 export default function HomeSections() {
  return (
-  <div className="container m-auto">
+  <div className="container">
    <HeroSection />
    <ProductsCart />
    <QuseCart />
