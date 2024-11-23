@@ -13,7 +13,7 @@ interface SectionsPartProps {
 export default function SectionsPart({Title, Description, ButtonTitle, ImagePart, Dir}: SectionsPartProps) {
  return (
   <div
-   className="flex flex-col md:flex-row justify-between items-center md:items-start md:p-8 py-40"
+   className="flex flex-col md:flex-row justify-between items-center md:items-start py-10 md:py-40"
    style={{direction: Dir}}
   >
    <div
@@ -34,7 +34,7 @@ export default function SectionsPart({Title, Description, ButtonTitle, ImagePart
     alt="تصویر مربوط به برنامه‌نویسی"
     width={400}
     height={400}
-    className="w-1/2 md:w-full lg:w-auto h-auto mt-6 lg:mt-0"
+    className="w-2/3 md:w-5/12 h-auto mt-6 lg:mt-0"
    />
   </div>
  );
