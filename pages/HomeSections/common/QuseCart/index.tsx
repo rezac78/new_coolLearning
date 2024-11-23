@@ -32,15 +32,6 @@ const fakeData = [
   description:
    "آموزش از ابتدا تا پیشرفته Vue.js با پروژه‌های عملی. کشف اکوسیستم Vue و استفاده از Vuex و Vue Router برای ساخت برنامه‌های تک‌صفحه‌ای. کار با API‌های واقعی و آموزش داده‌های پویا. مدت دوره: 8 هفته.",
  },
- {
-  id: 4,
-  image: "/Home/homeBaner.jpg",
-  alt: "Angular for Professionals",
-  title: "دوره Angular حرفه‌ای",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description:
-   "آموزش مباحث پیشرفته Angular و تایپ‌اسکریپت برای توسعه‌دهندگان حرفه‌ای. ساخت برنامه‌های قدرتمند با استفاده از RxJS و مدیریت state. مشارکت در پروژه‌های گروهی و آمادگی برای مصاحبه‌های فنی. مدت دوره: 12 هفته.",
- },
 ];
 
 export default function QuseCart() {

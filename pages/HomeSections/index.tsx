@@ -8,11 +8,12 @@ import QuseCart from "./common/QuseCart";
 
 export default function HomeSections() {
  return (
-  <div className="container">
+  <div>
+   <div className="container">
    <HeroSection />
-   <SectionsPart
-    Title="دوره‌های جامع برنامه‌نویسی"
-    Description={`
+    <SectionsPart
+     Title="دوره‌های جامع برنامه‌نویسی"
+     Description={`
     ما در این سایت مجموعه‌ای از دوره‌های برنامه‌نویسی حرفه‌ای و کاربردی را برای شما گردآوری کرده‌ایم. 
     این دوره‌ها شامل آموزش زبان‌های برنامه‌نویسی محبوب مثل 
     <strong>JavaScript</strong>، <strong>Python</strong> و <strong>React.js</strong> هستند و از سطح مبتدی تا پیشرفته طراحی شده‌اند.
@@ -20,14 +21,14 @@ export default function HomeSections() {
     تمامی دوره‌ها به همراه پروژه‌های عملی و مثال‌های واقعی ارائه می‌شوند تا شما بتوانید مهارت‌های برنامه‌نویسی خود را تقویت کنید و برای ورود به بازار کار آماده شوید. 
     همچنین، مربیان باتجربه و پشتیبانی ۲۴/۷ در تمامی مراحل یادگیری همراه شما خواهند بود.
   `}
-    ButtonTitle="مشاهده دوره‌ها"
-    ImagePart="/home/3657664.jpg"
-    Dir={"rtl"}
-   />
-   <ProductsCart />
-   <SectionsPart
-    Title="آزمون‌های تخصصی برنامه‌نویسی"
-    Description={`
+     ButtonTitle="مشاهده دوره‌ها"
+     ImagePart="/home/3657664.jpg"
+     Dir={"rtl"}
+    />
+    <ProductsCart />
+    <SectionsPart
+     Title="آزمون‌های تخصصی برنامه‌نویسی"
+     Description={`
     آزمون‌های تخصصی برنامه‌نویسی در این سایت به شما کمک می‌کنند تا مهارت‌های خود را در زمینه برنامه‌نویسی به چالش بکشید و پیشرفت خود را بسنجید. 
     این آزمون‌ها شامل سوالات متنوع از سطح مبتدی تا پیشرفته بوده و به گونه‌ای طراحی شده‌اند که شما را برای شرایط واقعی بازار کار آماده کنند.
     <br />
@@ -38,14 +39,14 @@ export default function HomeSections() {
     پس از شرکت در آزمون، می‌توانید نتایج خود را مشاهده کرده و از بازخوردهای تخصصی برای بهبود توانایی‌هایتان استفاده کنید. 
     همچنین، گواهینامه‌های معتبر پس از موفقیت در آزمون‌ها ارائه می‌شود که می‌تواند به عنوان مدرک ارزشمند در رزومه شما مورد استفاده قرار گیرد.
   `}
-    ButtonTitle="شروع آزمون"
-    ImagePart="/home/3426526.jpg"
-    Dir={"ltr"}
-   />
-   <QuseCart />
-   <SectionsPart
-    Title="مقالات و وبلاگ‌های تخصصی برنامه‌نویسی"
-    Description={`
+     ButtonTitle="شروع آزمون"
+     ImagePart="/home/3426526.jpg"
+     Dir={"ltr"}
+    />
+    <QuseCart />
+    <SectionsPart
+     Title="مقالات و وبلاگ‌های تخصصی برنامه‌نویسی"
+     Description={`
     بخش مقالات و وبلاگ‌های تخصصی ما به شما کمک می‌کند تا اطلاعات خود را در زمینه برنامه‌نویسی و تکنولوژی به‌روز نگه دارید. 
     این بخش شامل مقالات آموزشی، راهنماهای کاربردی، و بررسی‌های عمیق از زبان‌ها و تکنولوژی‌های مختلف مثل 
     <strong>JavaScript</strong>، <strong>Python</strong>، <strong>React.js</strong>، و <strong>Node.js</strong> است.
@@ -55,11 +56,12 @@ export default function HomeSections() {
     مقالات ما توسط متخصصین با تجربه نوشته شده‌اند و به شما کمک می‌کنند تا همواره یک گام جلوتر از دیگران باشید. 
     از تازه‌ترین اخبار دنیای برنامه‌نویسی گرفته تا مقالات پیشرفته برای حرفه‌ای‌ها، همه در اینجا در دسترس شماست.
   `}
-    ButtonTitle="مطالعه مقالات"
-    ImagePart="/home/3929637.jpg"
-    Dir={"rtl"}
-   />
-   <BlogsCart />
+     ButtonTitle="مطالعه مقالات"
+     ImagePart="/home/3929637.jpg"
+     Dir={"rtl"}
+    />
+    <BlogsCart />
+   </div>
   </div>
  );
 }

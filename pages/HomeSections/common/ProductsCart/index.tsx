@@ -39,17 +39,6 @@ const fakeData = [
   description: "آموزش Vue.js همراه با پروژه عملی",
   range: 5,
  },
- {
-  id: 4,
-  image: "/Home/homeBaner.jpg",
-  alt: "Angular for Professionals",
-  title: "دوره Angular حرفه‌ای",
-  price: "2200000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "آموزش Angular برای توسعه‌دهندگان حرفه‌ای",
-  range: 1,
- },
 ];
 
 const renderStars = (rating: number) => {
