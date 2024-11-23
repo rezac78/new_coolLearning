@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const iranSansXFont = localFont({
  src: [
@@ -37,11 +38,12 @@ export default function RootLayout({
   <html lang="fa" dir="rtl">
    <body
     style={{fontFamily: "var(--font-iranSans), Arial, sans-serif"}}
-    className={`${iranSansXFont.variable} font-iranSans leading-loose font-medium text-md text-txtColor bg-[#FAFAFA]`}
+    className={`${iranSansXFont.variable} font-iranSans leading-loose font-medium text-md text-txtColor bg-WhiteBackground`}
    >
     <>
      <Header />
      {children}
+     <Footer />
     </>
    </body>
   </html>

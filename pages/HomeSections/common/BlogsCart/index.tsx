@@ -43,10 +43,10 @@ const fakeData = [
  },
 ];
 
-export default function QuseCart() {
+export default function BlogsCart() {
  return (
   <div className="container mx-auto py-10">
-   <HeaderTitle Title="آخرین آزمون ها" Button="مشاهده بیشتر" typeHeader="medal" />
+   <HeaderTitle Title="آخرین بلاگ ها" Button="مشاهده بیشتر" />
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((item) => (
      <Card key={item.id} className="bg-white text-gray-700 w-full shadow-lg rounded-md overflow-hidden">
@@ -65,7 +65,9 @@ export default function QuseCart() {
        <p className="text-sm text-gray-500 mt-2">{item.description}</p>
       </CardContent>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <Button className="p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">مشاهده محصول</Button>
+       <Button className="p-3 rounded-lg text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300">
+        مشاهده بلاگ
+       </Button>
       </CardFooter>
      </Card>
     ))}

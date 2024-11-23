@@ -21,7 +21,7 @@ export default function Header() {
   setIsMenuOpen(!isMenuOpen);
  };
  return (
-  <nav className="bg-Background-Light text-Text-Light  p-4">
+  <nav className="bg-[#1e3a8a] text-[#ffffff]  p-4 mb-6">
    <div className="mx-auto flex items-center justify-between flex-wrap">
     <div className="flex items-center flex-shrink-0 text-white">
      <Links Href={"/"} type={"icon"}>
@@ -31,7 +31,7 @@ export default function Header() {
     <div className="hidden md:block">
      <div className="text-base flex-grow flex ">
       {navbar.map((e) => (
-       <Links IdName={e.name} type="icon" Href={e.Link} key={e.id} className="px-3">
+       <Links IdName={e.name} type="icon" Href={e.Link} key={e.id} className="px-3 hover:text-SecondaryColor transition duration-300">
         {e.name}
        </Links>
       ))}
