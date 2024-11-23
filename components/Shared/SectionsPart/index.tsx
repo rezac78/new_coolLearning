@@ -22,11 +22,8 @@ export default function SectionsPart({Title, Description, ButtonTitle, ImagePart
    >
     <h1 className="text-2xl font-bold mb-4">{Title}</h1>
     <p className="text-DarkGray max-w-3xl mb-6 text-justify">{Description}</p>
-    <Button
-     variant="ghost"
-     className="px-6 py-3 text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300"
-    >
-     {ButtonTitle}
+    <Button className="relative w-36 h-12 rounded-full text-sm font-medium hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 overflow-hidden ease-in-out">
+     <span className="relative z-10">مشاهده</span>
     </Button>
    </div>
    <Image

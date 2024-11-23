@@ -56,7 +56,7 @@ export default function BlogsCart() {
        <p className="text-sm text-gray-500 mt-2">{item.description}</p>
       </CardContent>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <Button className="p-3 rounded-lg text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300">
+       <Button variant="outline" className="p-3 rounded-lg transition duration-300">
         مشاهده بلاگ
        </Button>
       </CardFooter>

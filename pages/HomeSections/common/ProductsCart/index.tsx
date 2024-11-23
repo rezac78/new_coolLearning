@@ -86,7 +86,9 @@ export default function ProductsCart() {
        <span className="text-sm text-gray-500">20k مشاهده</span>
       </CardFooter>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <Button className="p-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">مشاهده محصول</Button>
+       <Button className="relative p-3 text-sm font-medium bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-lg transition duration-400 hover:shadow-xl transform hover:-translate-y-1 overflow-hidden ease-in-out">
+        <span className="relative z-10">مشاهده محصولات</span>
+       </Button>
       </CardFooter>
      </Card>
     ))}

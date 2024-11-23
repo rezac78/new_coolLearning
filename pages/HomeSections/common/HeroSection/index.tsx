@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import {Parallax, Pagination, Navigation} from "swiper/modules";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import ButtonSections from "@/components/Shared/Button/ButtonSections";
 export default function HeroSection() {
  return (
   <>
@@ -40,9 +41,10 @@ export default function HeroSection() {
         بدون نیاز به حضور در کلاس، مهارت‌های برنامه‌نویسی خود را در خانه بیاموزید. با دوره‌های آموزشی ما، یادگیری آسان،
         عملی و متناسب با زمان شماست.
        </p>
-       <Button className="p-3 rounded-lg -mt-4 text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 cursor-pointer">
+       {/* <Button className="relative p-3 rounded-full text-sm font-medium hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 overflow-hidden ease-in-out">
         مشاهده
-       </Button>
+       </Button> */}
+       <ButtonSections Title="مشاهده" Type="" />
       </div>
      </div>
     </SwiperSlide>

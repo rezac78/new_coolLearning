@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/Shared/Button/Button";
+import Button from "@/components/Shared/Button/ButtonSections";
 import Menu from "@/components/Shared/HamburgerMenu/Menu";
 import ImagePart from "@/components/Shared/ImgPart/Image";
 import Links from "@/components/Shared/Link/Link";
@@ -31,7 +31,13 @@ export default function Header() {
     <div className="hidden md:block">
      <div className="text-base flex-grow flex ">
       {navbar.map((e) => (
-       <Links IdName={e.name} type="icon" Href={e.Link} key={e.id} className="px-3 hover:text-SecondaryColor transition duration-300">
+       <Links
+        IdName={e.name}
+        type="icon"
+        Href={e.Link}
+        key={e.id}
+        className="px-3 hover:text-SecondaryColor transition duration-300"
+       >
         {e.name}
        </Links>
       ))}
