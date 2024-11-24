@@ -2,8 +2,8 @@ import React from "react";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
 import HeaderTitle from "@/components/Shared/HeaderTitle";
+import ButtonSections from "@/components/Shared/Button/ButtonSections";
 const fakeData = [
  {
   id: 1,
@@ -56,9 +56,7 @@ export default function BlogsCart() {
        <p className="text-sm text-gray-500 mt-2">{item.description}</p>
       </CardContent>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <Button variant="outline" className="p-3 rounded-lg transition duration-300">
-        مشاهده بلاگ
-       </Button>
+       <ButtonSections Title=" مشاهده بلاگ" Type="" />
       </CardFooter>
      </Card>
     ))}

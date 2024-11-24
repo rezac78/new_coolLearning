@@ -21,7 +21,7 @@ export default function Header() {
   setIsMenuOpen(!isMenuOpen);
  };
  return (
-  <nav className="bg-[#1e3a8a] text-[#ffffff]  p-4 mb-6">
+  <nav className="bg-DarkBlue text-[#ffffff]  p-4 mb-6">
    <div className="mx-auto flex items-center justify-between flex-wrap">
     <div className="flex items-center flex-shrink-0 text-white">
      <Links Href={"/"} type={"icon"}>

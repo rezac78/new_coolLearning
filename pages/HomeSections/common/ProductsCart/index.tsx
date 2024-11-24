@@ -2,8 +2,8 @@ import React from "react";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
 import HeaderTitle from "@/components/Shared/HeaderTitle";
+import ButtonSections from "@/components/Shared/Button/ButtonSections";
 
 const fakeData = [
  {
@@ -86,9 +86,7 @@ export default function ProductsCart() {
        <span className="text-sm text-gray-500">20k مشاهده</span>
       </CardFooter>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <Button className="relative p-3 text-sm font-medium bg-blue-500 text-white rounded-lg hover:bg-blue-600 shadow-lg transition duration-400 hover:shadow-xl transform hover:-translate-y-1 overflow-hidden ease-in-out">
-        <span className="relative z-10">مشاهده محصولات</span>
-       </Button>
+       <ButtonSections Title="مشاهده محصولات" Type="" />
       </CardFooter>
      </Card>
     ))}

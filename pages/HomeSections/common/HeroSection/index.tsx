@@ -8,8 +8,36 @@ import "swiper/css/navigation";
 
 import {Parallax, Pagination, Navigation} from "swiper/modules";
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
 import ButtonSections from "@/components/Shared/Button/ButtonSections";
+const slides = [
+ {
+  id: 1,
+  image: "/Home/Jowhareh_galleries_8_poster_d18d (2).jpg",
+  title: "برنامه‌نویسی را از خانه شروع کنید!",
+  description:
+   "بدون نیاز به حضور در کلاس، مهارت‌های برنامه‌نویسی خود را در خانه بیاموزید. با دوره‌های آموزشی ما، یادگیری آسان، عملی و متناسب با زمان شماست.",
+  buttonTitle: "مشاهده",
+  buttonLink: "#",
+ },
+ {
+  id: 2,
+  image: "/Home/Web_Programmer_01_generated (1).jpg",
+  title: "با مطالعه مقالات تخصصی، دانش خود را ارتقا دهید!",
+  description:
+   "در دنیای برنامه‌نویسی و تکنولوژی، به‌روز ماندن کلید موفقیت است. با مطالعه مقالات تخصصی ما، می‌توانید با جدیدترین روش‌ها، ابزارها و نکات مهم برنامه‌نویسی آشنا شوید.",
+  buttonTitle: "مشاهده مقالات",
+  buttonLink: "#",
+ },
+ {
+  id: 3,
+  image: "/Home/programming-background-with-pers.jpg",
+  title: "مهارت‌های خود را با آزمون‌های تخصصی بسنجید!",
+  description:
+   "آزمون‌های تخصصی برنامه‌نویسی به شما این امکان را می‌دهند که توانایی‌ها و دانش خود را در زبان‌ها و تکنولوژی‌های مختلف ارزیابی کنید.",
+  buttonTitle: "شروع آزمون",
+  buttonLink: "#",
+ },
+];
 export default function HeroSection() {
  return (
   <>
@@ -24,78 +52,28 @@ export default function HeroSection() {
     className="mySwiper"
    >
     <div slot="container-start" className="parallax-bg" data-swiper-parallax="-23%"></div>
-    <SwiperSlide>
-     <Image
-      className="rounded-3xl w-full h-full object-fit"
-      src="/Home/Jowhareh_galleries_8_poster_d18d (2).jpg"
-      alt="Hero"
-      width={1600}
-      height={1600}
-     />
-     <div className="absolute bottom-0 bg-[#1e3a8a] rounded-b-xl text-white w-full p-2">
-      <div className="subtitle" data-swiper-parallax="-200">
-       برنامه‌نویسی را از خانه شروع کنید!
+    {slides.map((slide) => (
+     <SwiperSlide key={slide.id}>
+      <Image
+       className="rounded-3xl w-full h-full object-fit"
+       src={slide.image}
+       alt={slide.title}
+       width={1600}
+       height={1600}
+      />
+      <div className="hidden md:block absolute top-10 left-14 bg-DarkBlue rounded-xl text-white w-1/3 p-4">
+       <h2 className="subtitle" data-swiper-parallax="-200">
+        {slide.title}
+       </h2>
+       <div className="text text-sm flex justify-between gap-3 md:gap-2" data-swiper-parallax="-100">
+        <span>{slide.description}</span>
+       </div>
+       <div className="flex justify-end mt-3">
+        <ButtonSections Title={slide.buttonTitle} Type="" />
+       </div>
       </div>
-      <div className="text text-sm flex justify-between gap-3 md:gap-2" data-swiper-parallax="-100">
-       <p>
-        بدون نیاز به حضور در کلاس، مهارت‌های برنامه‌نویسی خود را در خانه بیاموزید. با دوره‌های آموزشی ما، یادگیری آسان،
-        عملی و متناسب با زمان شماست.
-       </p>
-       {/* <Button className="relative p-3 rounded-full text-sm font-medium hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 overflow-hidden ease-in-out">
-        مشاهده
-       </Button> */}
-       <ButtonSections Title="مشاهده" Type="" />
-      </div>
-     </div>
-    </SwiperSlide>
-    <SwiperSlide>
-     <Image
-      className="rounded-3xl w-full h-full object-fit"
-      src="/Home/Web_Programmer_01_generated (1).jpg"
-      alt="Hero"
-      width={1600}
-      height={1600}
-     />
-     <div className="absolute bottom-0 bg-[#1e3a8a] rounded-b-xl text-white w-full p-2">
-      <div className="subtitle" data-swiper-parallax="-200">
-       با مطالعه مقالات تخصصی، دانش خود را ارتقا دهید!
-      </div>
-      <div className="text text-sm flex justify-between gap-3 md:gap-2" data-swiper-parallax="-100">
-       <p>
-        در دنیای برنامه‌نویسی و تکنولوژی، به‌روز ماندن کلید موفقیت است. با مطالعه مقالات تخصصی ما، می‌توانید با جدیدترین
-        روش‌ها، ابزارها و نکات مهم برنامه‌نویسی آشنا شوید. از مفاهیم پایه تا موضوعات پیشرفته، تمامی مقالات به زبان ساده
-        و کاربردی برای شما آماده شده‌اند.
-       </p>
-       <Button className="p-3 rounded-lg -mt-4 text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 cursor-pointer">
-        مشاهده مقالات
-       </Button>
-      </div>
-     </div>
-    </SwiperSlide>
-    <SwiperSlide>
-     <Image
-      className="rounded-3xl w-full h-full object-fit"
-      src="/Home/programming-background-with-pers.jpg"
-      alt="Hero"
-      width={1600}
-      height={1600}
-     />
-     <div className="absolute bottom-0 bg-[#1e3a8a] rounded-b-xl text-white w-full p-2">
-      <div className="subtitle" data-swiper-parallax="-200">
-       مهارت‌های خود را با آزمون‌های تخصصی بسنجید!
-      </div>
-      <div className="text text-sm flex justify-between gap-3 md:gap-2" data-swiper-parallax="-100">
-       <p>
-        آزمون‌های تخصصی برنامه‌نویسی به شما این امکان را می‌دهند که توانایی‌ها و دانش خود را در زبان‌ها و تکنولوژی‌های
-        مختلف ارزیابی کنید. از سوالات مبتدی تا چالش‌های پیشرفته، این آزمون‌ها برای هر سطح از برنامه‌نویسان طراحی
-        شده‌اند. با نتایج دقیق و بازخوردهای تخصصی، مسیر پیشرفت خود را شفاف‌تر کنید.
-       </p>
-       <Button className="p-3 rounded-lg -mt-4 text-white hover:text-white bg-SecondaryColor hover:bg-DarkerGreen transition duration-300 cursor-pointer">
-        شروع آزمون
-       </Button>
-      </div>
-     </div>
-    </SwiperSlide>
+     </SwiperSlide>
+    ))}
    </Swiper>
   </>
  );

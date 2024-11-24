@@ -1,7 +1,7 @@
-import {Button} from "@/components/ui/button";
 import BlogIcon from "@/public/Icon/BlogIcon";
 import CodeIcon from "@/public/Icon/CodeIcon";
 import MedalIcon from "@/public/Icon/MedalIcon";
+import ButtonSections from "../Button/ButtonSections";
 
 interface AlertProps {
  Title?: string;
@@ -17,12 +17,7 @@ export default function HeaderTitle(props: AlertProps) {
     </h2>
     <h2 className="text-2xl font-bold text-PrimaryColor mb-6 text-center">{props.Title}</h2>
    </div>
-   <Button
-    variant="ghost"
-    className="px-6 py-3 text-[#ffffff] hover:text-[#ffffff] bg-SecondaryColor hover:bg-DarkerGreen transition duration-300"
-   >
-    {props.Button}
-   </Button>
+   <ButtonSections Title={props.Button} Type="" />
   </div>
  );
 }
