@@ -22,7 +22,7 @@ export default function HomeSections() {
     همچنین، مربیان باتجربه و پشتیبانی ۲۴/۷ در تمامی مراحل یادگیری همراه شما خواهند بود.
   `}
      ButtonTitle="مشاهده دوره‌ها"
-     ImagePart="/home/3657664.jpg"
+     ImagePart="/Home/3657664.jpg"
      Dir={"rtl"}
     />
     <ProductsCart />
@@ -40,7 +40,7 @@ export default function HomeSections() {
     همچنین، گواهینامه‌های معتبر پس از موفقیت در آزمون‌ها ارائه می‌شود که می‌تواند به عنوان مدرک ارزشمند در رزومه شما مورد استفاده قرار گیرد.
   `}
      ButtonTitle="شروع آزمون"
-     ImagePart="/home/3426526.jpg"
+     ImagePart="/Home/3426526.jpg"
      Dir={"ltr"}
     />
     <QuseCart />
@@ -57,7 +57,7 @@ export default function HomeSections() {
     از تازه‌ترین اخبار دنیای برنامه‌نویسی گرفته تا مقالات پیشرفته برای حرفه‌ای‌ها، همه در اینجا در دسترس شماست.
   `}
      ButtonTitle="مطالعه مقالات"
-     ImagePart="/home/3929637.jpg"
+     ImagePart="/Home/3929637.jpg"
      Dir={"rtl"}
     />
     <BlogsCart />

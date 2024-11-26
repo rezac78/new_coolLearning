@@ -17,7 +17,7 @@ export default function HeaderTitle(props: AlertProps) {
     </h2>
     <h2 className="text-2xl font-bold text-PrimaryColor mb-6 text-center">{props.Title}</h2>
    </div>
-   <ButtonSections Title={props.Button} Type="" />
+   <ButtonSections Title={props.Button} Type="linkButton">{props.Button}</ButtonSections>
   </div>
  );
 }

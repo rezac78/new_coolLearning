@@ -56,7 +56,7 @@ export default function BlogsCart() {
        <p className="text-sm text-gray-500 mt-2">{item.description}</p>
       </CardContent>
       <CardFooter className="px-4 py-2 flex gap-3">
-       <ButtonSections Title=" مشاهده بلاگ" Type="" />
+       <ButtonSections Title="مشاهده بلاگ"  >مشاهده بلاگ</ButtonSections>
       </CardFooter>
      </Card>
     ))}
