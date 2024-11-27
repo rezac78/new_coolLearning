@@ -1,9 +1,9 @@
-import React from "react";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import React, {useEffect} from "react";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import Image from "next/image";
 import HeaderTitle from "@/components/Shared/HeaderTitle";
-import ButtonSections from "@/components/Shared/Button/ButtonSections";
+import Aos from "aos";
 const fakeData = [
  {
   id: 1,
@@ -35,14 +35,27 @@ const fakeData = [
 ];
 
 export default function BlogsCart() {
+ useEffect(() => {
+  Aos.init();
+ }, []);
  return (
   <div className="container mx-auto py-10">
    <HeaderTitle Title="آخرین بلاگ ها" Button="مشاهده بیشتر" />
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((item) => (
-     <Card key={item.id} className="bg-white text-gray-700 w-full rounded-md overflow-hidden shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400">
+     <Card
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
+      key={item.id}
+      className="max-w-sm rounded overflow-hidden shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400"
+     >
       <Image className="w-full h-48 object-cover" src={item.image} alt={item.alt} width={500} height={500} />
-      <CardHeader className="p-4 flex flex-col gap-3">
+      <CardContent className="px-6 py-4">
+       <div className="font-bold text-xl mb-2">{item.title}</div>
+       <p className="text-gray-700 text-base text-justify">{item.description}</p>
+      </CardContent>
+      <CardFooter className="px-6 py-4">
        <div className="flex items-center gap-2">
         {item.hashTag.map((tag, index) => (
          <Badge key={index} className="px-3 py-1 rounded-full text-xs bg-gray-100" variant="outline">
@@ -50,13 +63,6 @@ export default function BlogsCart() {
          </Badge>
         ))}
        </div>
-      </CardHeader>
-      <CardContent className="px-4 py-2">
-       <h2 className="font-semibold text-lg overflow-ellipsis overflow-hidden whitespace-nowrap">{item.title}</h2>
-       <p className="text-sm text-gray-500 mt-2">{item.description}</p>
-      </CardContent>
-      <CardFooter className="px-4 py-2 flex gap-3">
-       <ButtonSections Title="مشاهده بلاگ"  >مشاهده بلاگ</ButtonSections>
       </CardFooter>
      </Card>
     ))}

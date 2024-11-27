@@ -5,8 +5,13 @@ import BlogsCart from "./common/BlogsCart";
 import HeroSection from "./common/HeroSection";
 import ProductsCart from "./common/ProductsCart";
 import QuseCart from "./common/QuseCart";
+import AOS from "aos";
+import {useEffect} from "react";
 
 export default function HomeSections() {
+ useEffect(() => {
+  AOS.init();
+ }, []);
  return (
   <div>
    <div className="container">
