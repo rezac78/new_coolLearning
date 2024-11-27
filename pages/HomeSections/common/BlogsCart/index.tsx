@@ -48,7 +48,7 @@ export default function BlogsCart() {
       data-aos-easing="ease-out-cubic"
       data-aos-duration="1000"
       key={item.id}
-      className="max-w-sm rounded overflow-hidden shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400"
+      className="rounded  flex flex-col bg-white overflow-hidden shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400"
      >
       <Image className="w-full h-48 object-cover" src={item.image} alt={item.alt} width={500} height={500} />
       <CardContent className="px-6 py-4">
