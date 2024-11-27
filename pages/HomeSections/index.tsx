@@ -30,7 +30,7 @@ export default function HomeSections() {
      Dir={"rtl"}
     />
     <ProductsCart />
-    {/* <SectionsPart
+    <SectionsPart
      Title="آزمون‌های تخصصی برنامه‌نویسی"
      Description={`
     آزمون‌های تخصصی برنامه‌نویسی در این سایت به شما کمک می‌کنند تا مهارت‌های خود را در زمینه برنامه‌نویسی به چالش بکشید و پیشرفت خود را بسنجید. 
@@ -45,8 +45,8 @@ export default function HomeSections() {
      ImagePart="/Home/3426526.jpg"
      Dir={"ltr"}
     />
-    <QuseCart /> */}
-    {/* <SectionsPart
+    <QuseCart />
+    <SectionsPart
      Title="مقالات و وبلاگ‌های تخصصی برنامه‌نویسی"
      Description={`
     بخش مقالات و وبلاگ‌های تخصصی ما به شما کمک می‌کند تا اطلاعات خود را در زمینه برنامه‌نویسی و تکنولوژی به‌روز نگه دارید. 
@@ -60,7 +60,7 @@ export default function HomeSections() {
      ImagePart="/Home/3929637.jpg"
      Dir={"rtl"}
     />
-    <BlogsCart /> */}
+    <BlogsCart />
    </div>
   </div>
  );
