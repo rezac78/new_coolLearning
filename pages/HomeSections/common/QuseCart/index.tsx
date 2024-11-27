@@ -40,7 +40,7 @@ export default function QuseCart() {
    <HeaderTitle Title="آخرین آزمون ها" Button="مشاهده بیشتر" typeHeader="medal" />
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((item) => (
-     <Card key={item.id} className="bg-white text-gray-700 w-full shadow-lg rounded-md overflow-hidden">
+     <Card key={item.id} className="bg-white text-gray-700 w-full rounded-md overflow-hidden shadow-none transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-gray-400">
       <Image className="w-full h-48 object-cover" src={item.image} alt={item.alt} width={500} height={500} />
       <CardHeader className="p-4 flex flex-col gap-3">
        <div className="flex items-center gap-2">

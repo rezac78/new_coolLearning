@@ -44,7 +44,7 @@ export default function Header() {
      </div>
     </div>
     <div className="md:hidden">
-     <Button Type="child" IdName="Bars3Icon" Click={toggleMenu}>
+     <Button Type="child" Click={toggleMenu}>
       <MenuIcon />
      </Button>
     </div>
