@@ -7,6 +7,7 @@ import ProductsCart from "./common/ProductsCart";
 import QuseCart from "./common/QuseCart";
 import AOS from "aos";
 import {useEffect} from "react";
+import TotalSection from "./common/TotalSection";
 
 export default function HomeSections() {
  useEffect(() => {
@@ -61,6 +62,7 @@ export default function HomeSections() {
      Dir={"rtl"}
     />
     <BlogsCart />
+    <TotalSection/>
    </div>
   </div>
  );
