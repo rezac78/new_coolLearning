@@ -52,7 +52,7 @@ export default function BlogsCart() {
      >
       <Image className="w-full h-48 object-cover" src={item.image} alt={item.alt} width={500} height={500} />
       <CardContent className="px-6 py-4">
-       <div className="font-bold text-xl mb-2">{item.title}</div>
+       <div className="font-bold text-lg md:text-xl mb-2">{item.title}</div>
        <p className="text-gray-700 text-base text-justify">{item.description}</p>
       </CardContent>
       <CardFooter className="px-6 py-4">
