@@ -39,7 +39,7 @@ export default function HeaderSections() {
     <BreadcrumbPart data={breadcrumbData} />
    </div>
    <div className="flex justify-between my-12 p-4 border-2 rounded-xl shadow-xl">
-    <Search className="w-[400px]"/>
+    <Search className="w-[400px]" />
     <SelectPart className="w-[250px] py-6" data={selectOptions} title="انتخاب دسته بندی" />
    </div>
   </div>

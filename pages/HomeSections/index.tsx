@@ -1,5 +1,4 @@
 "use client";
-
 import SectionsPart from "@/components/Shared/SectionsPart";
 import BlogsCart from "./common/BlogsCart";
 import HeroSection from "./common/HeroSection";
@@ -9,7 +8,41 @@ import AOS from "aos";
 import {useEffect} from "react";
 import TotalSection from "./common/TotalSection";
 import CommentSections from "./common/commentSections";
-
+const fakeData = [
+ {
+  id: 1,
+  image: "/Home/homeBaner.jpg",
+  alt: "Node.js Advanced Course",
+  title: "دوره Node.js پیشرفته",
+  price: "2000000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "آموزش کامل Node.js به همراه پروژه‌های عملی",
+  range: 3,
+ },
+ {
+  id: 2,
+  image: "/Home/homeBaner.jpg",
+  alt: "React Beginner to Advanced",
+  title: "دوره React پیشرفته",
+  price: "2500000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "یادگیری React از مبتدی تا پیشرفته",
+  range: 4,
+ },
+ {
+  id: 3,
+  image: "/Home/homeBaner.jpg",
+  alt: "Vue.js Comprehensive Guide",
+  title: "دوره Vue.js جامع",
+  price: "1800000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "آموزش Vue.js همراه با پروژه عملی",
+  range: 5,
+ },
+];
 export default function HomeSections() {
  useEffect(() => {
   AOS.init();
@@ -31,7 +64,7 @@ export default function HomeSections() {
      ImagePart="/Home/3657664.jpg"
      Dir={"rtl"}
     />
-    <ProductsCart />
+    <ProductsCart data={fakeData} />
     <SectionsPart
      Title="آزمون‌های تخصصی برنامه‌نویسی"
      Description={`
@@ -63,8 +96,8 @@ export default function HomeSections() {
      Dir={"rtl"}
     />
     <BlogsCart />
-    <CommentSections/>
-    <TotalSection/>
+    <CommentSections />
+    <TotalSection />
    </div>
   </div>
  );

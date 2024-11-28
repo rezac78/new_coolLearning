@@ -26,7 +26,7 @@ export default function BreadcrumbPart(props: BreadcrumbProps) {
     {props.data.items.map((item, index) => {
      if (item.type === "link") {
       return (
-       <BreadcrumbItem key={index}>
+       <BreadcrumbItem className="text-LightBlue" key={index}>
         <BreadcrumbLink href={item.href}>{item.label}</BreadcrumbLink>
        </BreadcrumbItem>
       );
