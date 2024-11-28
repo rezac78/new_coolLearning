@@ -8,7 +8,7 @@ import UserIcon from "@/public/Icon/UserIcon";
 import {useState} from "react";
 const navbar = [
  {id: 1, name: "خانه", Link: "/"},
- {id: 2, name: "فروشگاه", Link: "/courses"},
+ {id: 2, name: "فروشگاه", Link: "/shop"},
  {id: 3, name: "آزمون‌ها", Link: "/blog"},
  {id: 4, name: "دوره‌ها", Link: "/about"},
  {id: 5, name: "درباره ما", Link: "/about"},

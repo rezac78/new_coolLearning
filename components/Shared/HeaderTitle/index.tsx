@@ -12,7 +12,7 @@ interface AlertProps {
 export default function HeaderTitle(props: AlertProps) {
  return (
   <div className="flex justify-between mt-10 relative">
-   <div className="flex items-baseline">
+   <div className="flex gap-2 items-baseline">
     <h2>
      {props.typeHeader === "course" ? (
       <CodeIcon width="1em" height="1em" />
