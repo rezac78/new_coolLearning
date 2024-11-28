@@ -91,7 +91,6 @@ export default function MainSections() {
  };
  return (
   <div className="grid grid-cols-12 gap-4 h-auto">
-   {/* Sidebar */}
    <div className="col-span-3 order-2 md:order-1 border-2 rounded-md p-4 min-h-0 max-h-screen overflow-auto bg-gray-50">
     <div className="px-4 py-6">
      <h3 className="-mx-2 -my-3 flow-root border-2 rounded-md">
