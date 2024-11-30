@@ -1,20 +1,39 @@
 "use client";
 import React from "react";
 import RightSections from "./common/RightSections";
-
+import LeftSections from "./common/LeftSections";
+import BreadcrumbPart from "@/components/Shared/Breadcrumb";
+interface BreadcrumbItemType {
+ type: "link" | "separator" | "page";
+ label?: string;
+ href?: string;
+}
+interface BreadcrumbData {
+ items: BreadcrumbItemType[];
+}
+const breadcrumbData: BreadcrumbData = {
+ items: [
+  {type: "link", label: "خانه", href: "/"},
+  {type: "separator"},
+  {type: "link", label: "فروشگاه", href: "/shop"},
+  {type: "separator"},
+  {type: "link", label: "دوره nodeJS", href: "/shop/1"},
+  {type: "separator"},
+  {type: "page", label: "دوره NodeJS"},
+ ],
+};
 export default function ShopSingle() {
  return (
   <div className="container mx-auto px-4 py-6">
+   <div className=" mb-5">
+    <h1 className="text-xl my-5">دوره nodeJs</h1>
+    <BreadcrumbPart data={breadcrumbData} />
+   </div>
    <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-    <div className="col-span-12 md:col-span-3 order-2 md:order-1 border-2 border-gray-200 rounded-md p-4 overflow-auto bg-white shadow-sm">
-     <h2 className="text-lg font-semibold mb-4">سایدبار</h2>
-     <ul>
-      <li className="text-sm text-gray-600 hover:text-gray-800 cursor-pointer mb-2">لینک ۱</li>
-      <li className="text-sm text-gray-600 hover:text-gray-800 cursor-pointer mb-2">لینک ۲</li>
-      <li className="text-sm text-gray-600 hover:text-gray-800 cursor-pointer mb-2">لینک ۳</li>
-     </ul>
+    <div className="col-span-12 md:col-span-4 order-1">
+     <LeftSections />
     </div>
-    <div className="col-span-12 md:col-span-9 order-1 md:order-2">
+    <div className="col-span-12 md:col-span-8 order-2">
      <RightSections />
     </div>
    </div>

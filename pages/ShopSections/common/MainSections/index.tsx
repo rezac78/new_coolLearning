@@ -5,74 +5,6 @@ import ProductsCart from "@/pages/HomeSections/common/ProductsCart";
 import MinusIcon from "@/public/Icon/MinusIcon";
 import PlusIcon from "@/public/Icon/PlusIcon";
 import React, {useState} from "react";
-const fakeData = [
- {
-  id: 1,
-  image: "/Home/homeBaner.jpg",
-  alt: "Node.js Advanced Course",
-  title: "دوره Node.js پیشرفته",
-  price: "2000000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "آموزش کامل Node.js به همراه پروژه‌های عملی",
-  range: 3,
- },
- {
-  id: 2,
-  image: "/Home/homeBaner.jpg",
-  alt: "React Beginner to Advanced",
-  title: "دوره React پیشرفته",
-  price: "2500000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "یادگیری React از مبتدی تا پیشرفته",
-  range: 4,
- },
- {
-  id: 3,
-  image: "/Home/homeBaner.jpg",
-  alt: "Vue.js Comprehensive Guide",
-  title: "دوره Vue.js جامع",
-  price: "1800000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "آموزش Vue.js همراه با پروژه عملی",
-  range: 5,
- },
- {
-  id: 4,
-  image: "/Home/homeBaner.jpg",
-  alt: "Node.js Advanced Course",
-  title: "دوره Node.js پیشرفته",
-  price: "2000000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "آموزش کامل Node.js به همراه پروژه‌های عملی",
-  range: 3,
- },
- {
-  id: 5,
-  image: "/Home/homeBaner.jpg",
-  alt: "React Beginner to Advanced",
-  title: "دوره React پیشرفته",
-  price: "2500000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "یادگیری React از مبتدی تا پیشرفته",
-  range: 4,
- },
- {
-  id: 6,
-  image: "/Home/homeBaner.jpg",
-  alt: "Vue.js Comprehensive Guide",
-  title: "دوره Vue.js جامع",
-  price: "1800000",
-  offPrice: "3000000",
-  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
-  description: "آموزش Vue.js همراه با پروژه عملی",
-  range: 5,
- },
-];
 const filterData = {
  title: "دسته بندی",
  options: [
@@ -128,7 +60,7 @@ export default function MainSections() {
     </div>
    </div>
    <div className="col-span-9 order-1 md:order-2 p-4">
-    <ProductsCart data={fakeData} TypeCard="shop" />
+    <ProductsCart TypeCard="shop" />
     <ButtonSections Title="مشاهده بیشتر">مشاهده بیشتر</ButtonSections>
    </div>
   </div>

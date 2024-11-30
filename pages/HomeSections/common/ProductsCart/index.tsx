@@ -18,23 +18,57 @@ const renderStars = (rating: number) => {
  }
  return stars;
 };
-interface Product {
- id: number;
- image: string;
- alt: string;
- title: string;
- price: string;
- offPrice: string;
- hashTag: string[];
- description: string;
- range: number;
-}
+// interface Product {
+//  id: number;
+//  image: string;
+//  alt: string;
+//  title: string;
+//  price: string;
+//  offPrice: string;
+//  hashTag: string[];
+//  description: string;
+//  range: number;
+// }
 
 interface ProductsCartProps {
  TypeCard?: string;
- data: Product[];
 }
-export default function ProductsCart({TypeCard = "home", data}: ProductsCartProps) {
+const fakeData = [
+ {
+  id: 1,
+  image: "/Home/homeBaner.jpg",
+  alt: "Node.js Advanced Course",
+  title: "دوره Node.js پیشرفته",
+  price: "2000000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "آموزش کامل Node.js به همراه پروژه‌های عملی",
+  range: 3,
+ },
+ {
+  id: 2,
+  image: "/Home/homeBaner.jpg",
+  alt: "React Beginner to Advanced",
+  title: "دوره React پیشرفته",
+  price: "2500000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "یادگیری React از مبتدی تا پیشرفته",
+  range: 4,
+ },
+ {
+  id: 3,
+  image: "/Home/homeBaner.jpg",
+  alt: "Vue.js Comprehensive Guide",
+  title: "دوره Vue.js جامع",
+  price: "1800000",
+  offPrice: "3000000",
+  hashTag: ["وب دیزاین", "برنامه‌نویسی"],
+  description: "آموزش Vue.js همراه با پروژه عملی",
+  range: 5,
+ },
+];
+export default function ProductsCart({TypeCard = "home"}: ProductsCartProps) {
  useEffect(() => {
   Aos.init();
  }, []);
@@ -42,7 +76,7 @@ export default function ProductsCart({TypeCard = "home", data}: ProductsCartProp
   <div className="container mx-auto py-10 ">
    {TypeCard === "home" && <HeaderTitle Title="آخرین دوره ها" Button="مشاهده بیشتر" typeHeader="course" />}
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-    {data.map((item) => (
+    {fakeData.map((item) => (
      <Card
       data-aos="flip-left"
       data-aos-easing="ease-out-cubic"
