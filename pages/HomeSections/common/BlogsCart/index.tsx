@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import Image from "next/image";
-import HeaderTitle from "@/components/Shared/HeaderTitle";
 import Aos from "aos";
 const fakeData = [
  {
@@ -39,8 +38,7 @@ export default function BlogsCart() {
   Aos.init();
  }, []);
  return (
-  <div className="container mx-auto py-10">
-   <HeaderTitle Title="آخرین بلاگ ها" Button="مشاهده بیشتر" />
+  <div className="container mx-auto">
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((item) => (
      <Card

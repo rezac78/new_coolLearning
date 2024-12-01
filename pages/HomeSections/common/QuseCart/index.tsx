@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import Image from "next/image";
-import HeaderTitle from "@/components/Shared/HeaderTitle";
 import Aos from "aos";
 import ClockIcon from "@/public/Icon/ClockIcon";
 import CommentIcon from "@/public/Icon/CommentIcon";
@@ -40,8 +39,7 @@ export default function QuseCart() {
   Aos.init();
  }, []);
  return (
-  <div className="container mx-auto py-10">
-   <HeaderTitle Title="آخرین آزمون ها" Button="مشاهده بیشتر" typeHeader="medal" />
+  <div className="container mx-auto">
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((course) => (
      <Card
@@ -58,9 +56,7 @@ export default function QuseCart() {
        </CardHeader>
       </div>
       <CardContent className="px-6 py-4 mb-auto">
-       <h2 className="font-medium text-lg transition duration-500 ease-in-out mb-2">
-        {course.title}
-       </h2>
+       <h2 className="font-medium text-lg transition duration-500 ease-in-out mb-2">{course.title}</h2>
        <p className="text-gray-500 text-sm">{course.description}</p>
       </CardContent>
       <CardFooter className="px-6 py-3 flex flex-row items-center justify-between bg-gray-100">

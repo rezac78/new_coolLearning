@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import Image from "next/image";
-import HeaderTitle from "@/components/Shared/HeaderTitle";
 import ButtonSections from "@/components/Shared/Button/ButtonSections";
 import Aos from "aos";
 
@@ -30,9 +29,6 @@ const renderStars = (rating: number) => {
 //  range: number;
 // }
 
-interface ProductsCartProps {
- TypeCard?: string;
-}
 const fakeData = [
  {
   id: 1,
@@ -68,13 +64,12 @@ const fakeData = [
   range: 5,
  },
 ];
-export default function ProductsCart({TypeCard = "home"}: ProductsCartProps) {
+export default function ProductsCart() {
  useEffect(() => {
   Aos.init();
  }, []);
  return (
-  <div className="container mx-auto py-10 ">
-   {TypeCard === "home" && <HeaderTitle Title="آخرین دوره ها" Button="مشاهده بیشتر" typeHeader="course" />}
+  <div className="container mx-auto">
    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
     {fakeData.map((item) => (
      <Card

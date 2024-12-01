@@ -38,8 +38,8 @@ export default function HeaderSections() {
     <span>آموزش باحال (25)</span>
     <BreadcrumbPart data={breadcrumbData} />
    </div>
-   <div className="flex justify-between my-12 p-4 border-2 rounded-xl shadow-xl">
-    <Search className="w-[400px]" />
+   <div className="flex flex-wrap justify-center md:justify-between my-12 gap-6 p-4 border-2 rounded-xl shadow-xl">
+    <Search className="w-full md:w-[400px]" />
     <SelectPart className="w-[250px] py-6" data={selectOptions} title="انتخاب دسته بندی" />
    </div>
   </div>

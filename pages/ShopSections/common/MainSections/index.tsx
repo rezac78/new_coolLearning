@@ -22,8 +22,8 @@ export default function MainSections() {
   setIsOpen(!isOpen);
  };
  return (
-  <div className="grid grid-cols-12 gap-4 h-auto">
-   <div className="col-span-3 order-2 md:order-1 border-2 rounded-md p-4 min-h-0 max-h-screen overflow-auto bg-gray-50">
+  <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+   <div className="col-span-12 md:col-span-3 order-1 md:order-1 border-2 rounded-md p-4 w-full  bg-gray-50">
     <div className="px-4 py-6">
      <h3 className="-mx-2 -my-3 flow-root border-2 rounded-md">
       <button
@@ -59,9 +59,11 @@ export default function MainSections() {
      )}
     </div>
    </div>
-   <div className="col-span-9 order-1 md:order-2 p-4">
-    <ProductsCart TypeCard="shop" />
-    <ButtonSections Title="مشاهده بیشتر">مشاهده بیشتر</ButtonSections>
+   <div className="col-span-12 md:col-span-9 order-2 p-4">
+    <ProductsCart />
+    <div className="py-10">
+     <ButtonSections Title="مشاهده بیشتر">مشاهده بیشتر</ButtonSections>
+    </div>
    </div>
   </div>
  );

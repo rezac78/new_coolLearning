@@ -8,6 +8,7 @@ import AOS from "aos";
 import {useEffect} from "react";
 import TotalSection from "./common/TotalSection";
 import CommentSections from "./common/commentSections";
+import HeaderTitle from "@/components/Shared/HeaderTitle";
 
 export default function HomeSections() {
  useEffect(() => {
@@ -30,6 +31,7 @@ export default function HomeSections() {
      ImagePart="/Home/3657664.jpg"
      Dir={"rtl"}
     />
+    <HeaderTitle Title="آخرین دوره ها" Button="مشاهده بیشتر" typeHeader="course" />
     <ProductsCart />
     <SectionsPart
      Title="آزمون‌های تخصصی برنامه‌نویسی"
@@ -46,6 +48,7 @@ export default function HomeSections() {
      ImagePart="/Home/3426526.jpg"
      Dir={"ltr"}
     />
+    <HeaderTitle Title="آخرین آزمون ها" Button="مشاهده بیشتر" typeHeader="medal" />
     <QuseCart />
     <SectionsPart
      Title="مقالات و وبلاگ‌های تخصصی برنامه‌نویسی"
@@ -61,6 +64,7 @@ export default function HomeSections() {
      ImagePart="/Home/3929637.jpg"
      Dir={"rtl"}
     />
+    <HeaderTitle Title="آخرین بلاگ ها" Button="مشاهده بیشتر" />
     <BlogsCart />
     <CommentSections />
     <TotalSection />
